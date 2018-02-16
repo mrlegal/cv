@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Mr.Mahmoud Saleh CV </title>
+</head>
+<body>
+  <center>
+    <h1> Mahmoud Saleh CV </h1>
+    <div class="me-content me-display-container">
+      <img class="mySlides" src="img/1.jpg" style="width:50%" style="height: 20">
+      <img class="mySlides" src="img/2.jpg" style="width:50%" style="height: 20">
+      <img class="mySlides" src="img/3.jpg" style="width:50%" style="height: 20">
+      <img class="mySlides" src="img/4.jpg" style="width:50%" style="height: 20">
+      <button class="me-button me-black me-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="me-button me-black me-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+    </script>
+    <br>
+    <embed src="file/cv.pdf" width="800px" height="1100px" />
+    <pre style="font-size:1cm">Created By Mahmoud Mohammad Ahmed Saleh  </pre>
+  </center>
+</body>
+</html>
